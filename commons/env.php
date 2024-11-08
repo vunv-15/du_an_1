@@ -1,7 +1,8 @@
 <?php 
 
 // Đường dẫn vào Admin
-define('BASE_URL'       , 'http://localhost/mvc-oop-basic/');
+define('BASE_URL'       , 'http://localhost/Du_an_1/mon_du_an_1/');
+define('BASE_URL_ADMIN'       , 'http://localhost/Du_an_1/mon_du_an_1/admin/');
 
 define('DB_HOST'    , 'localhost');
 define('DB_PORT'    , 3306);
