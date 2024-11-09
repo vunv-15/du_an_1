@@ -50,7 +50,7 @@
 
                         <div class="footer__top-contact">
                             <div class="footer__top-contact-icon">
-                                <img src="images/phone_top.png" class="footer__top-contact-img">
+                                <img src="./assets/images/phone_top.png" class="footer__top-contact-img">
                             </div>
 
                             <div class="footer__top-contact-phone-wrap">
@@ -69,16 +69,16 @@
 
                         <div class="footer__top-contact-social">
                             <a href="#" class="footer__top-contact-social-link">
-                                <img src="images/facebook.png">
+                                <img src="./assets/images/facebook.png">
                             </a>
                             <a href="#" class="footer__top-contact-social-link">
-                                <img src="images/youtube.png">
+                                <img src="./assets/images/youtube.png">
                             </a>
                             <a href="#" class="footer__top-contact-social-link">
-                                <img src="images/tiktok.png">
+                                <img src="./assets/images/tiktok.png">
                             </a>
                             <a href="#" class="footer__top-contact-social-link">
-                                <img src="images/zalo.png">
+                                <img src="./assets/images/zalo.png">
                             </a>
                         </div>
                     </article>
