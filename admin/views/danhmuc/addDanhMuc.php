@@ -9,14 +9,11 @@
     <section class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>DataTables</h1>
+          <div class="col-sm-11">
+            <h1>Quản Lý Danh Mục Sản Phảm</h1>
           </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">DataTables</li>
-            </ol>
+          <div class="col-sm-1">
+            
           </div>
         </div>
       </div><!-- /.container-fluid -->
@@ -29,7 +26,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">DataTable with minimal features & hover style</h3>
+                <h3 class="card-title">Thêm Danh Mục Sản Phẩm</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -467,7 +464,7 @@
             </div>
             <!-- /.card -->
 
-            <div class="card">
+            <div class="card-footer">
               <div class="card-header">
                 <h3 class="card-title">DataTable with default features</h3>
               </div>
