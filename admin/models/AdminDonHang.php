@@ -79,5 +79,51 @@ class AdminDonHang
             echo "Lỗi" .$e->getMessage();
         }
     }
+
+    public function updateDonHang($id, $ten_nguoi_nhan, $sdt_nguoi_nhan, $email_nguoi_nhan, $dia_chi_nguoi_nhan, $ghi_chu, $trang_thai_id)
+    {
+        try{
+            $sql = 'UPDATE don_hangs
+                SET 
+                    ten_nguoi_nhan = :ten_nguoi_nhan,
+                    sdt_nguoi_nhan = :sdt_nguoi_nhan,
+                    email_nguoi_nhan = :email_nguoi_nhan,
+                    dia_chi_nguoi_nhan = :dia_chi_nguoi_nhan,
+                    ghi_chu = :ghi_chu,
+                    trang_thai_id = :trang_thai_id,
+                WHERE id = :id;
+            ';
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute([
+                ':ten_nguoi_nhan' => $ten_nguoi_nhan,
+                ':sdt_nguoi_nhan' => $sdt_nguoi_nhan,
+                ':email_nguoi_nhan' => $email_nguoi_nhan,
+                ':dia_chi_nguoi_nhan' => $dia_chi_nguoi_nhan,
+                ':ghi_chu' => $ghi_chu,
+                ':trang_thai_id' => $trang_thai_id,
+                ':id' => $id
+            ]);
+        } catch(Exception $e){
+            echo "Lỗi" .$e->getMessage();
+        }
+    }
+
+    public function getDonHangFromKhachHang($id)
+    {
+        try{
+            $sql = 'SELECT don_hangs.*, trang_thai_don_hangs.ten_trang_thai
+                    FROM don_hangs
+                    INNER JOIN trang_thai_don_hangs ON don_hangs.trang_thai_id = trang_thai_don_hangs.id
+                    WHERE don_hangs.tai_khoan_id = :id;
+            ';
+
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute([
+                ':id' => $id
+            ]);
+        }catch(Exception $e){
+            echo "Lỗi" .$e->getMessage();
+        }
+    }
 }
 ?>

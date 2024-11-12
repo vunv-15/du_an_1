@@ -20,6 +20,17 @@ class AdminDonHangController
         require_once './views/donhang/detailDonHang.php';
     }
 
-    
+    public function formEditDonHang()
+    {
+        $id = $_GET['id_don_hang'];
+        $donHang = $this->modelDonHang->getDetailDonHang($id);
+        $listTrangThaiDonHang = $this->modelDonHang->getAllTrangThaiDonHang();
+        if($donHang){
+            require_once './views/donhang/editDonHang.php';
+            deleteSessionError();
+        }else{
+            header("Location:" .BASE_URL_ADMIN . '?act=don-hang');
+        }
+    }
 }
 ?>

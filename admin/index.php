@@ -22,4 +22,5 @@ match ($act) {
     'danh-muc' => (new AdminDanhMucController()) -> danhSachDanhMuc(),   
     // Đơn hàng
     'don-hang' => (new AdminDonHangController())->danhSachDonHang(),
+    'form-sua-don_hang' => (new AdminDonHangController())->formEditDonHang(),
 };
